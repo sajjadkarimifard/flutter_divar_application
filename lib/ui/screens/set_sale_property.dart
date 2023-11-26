@@ -5,8 +5,8 @@ import 'package:flutter_divar_application/constant/text_style.dart';
 import 'package:flutter_divar_application/ui/widgets/checkbox.dart';
 import 'package:flutter_divar_application/ui/widgets/container_botton.dart';
 
-class StePropertyScreen extends StatelessWidget {
-  const StePropertyScreen({super.key});
+class SetSalePropertyScreen extends StatelessWidget {
+  const SetSalePropertyScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -223,7 +223,15 @@ class StePropertyScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 40),
-              Containerbotton('ثبت آگهی', false),
+              InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return SetSalePropertyScreen();
+                      },
+                    ));
+                  },
+                  child: Containerbotton('ثبت آگهی', false)),
             ],
           ),
         ),

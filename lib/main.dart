@@ -3,16 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_divar_application/constant/color.dart';
 import 'package:flutter_divar_application/ui/screens/category_screen.dart';
-import 'package:flutter_divar_application/ui/screens/get_message_cod_screen.dart';
 import 'package:flutter_divar_application/ui/screens/home_screen.dart';
-import 'package:flutter_divar_application/ui/screens/import_number_screen.dart';
 import 'package:flutter_divar_application/ui/screens/profile_screen.dart';
-import 'package:flutter_divar_application/ui/screens/register_sale_ad_screen.dart';
-import 'package:flutter_divar_application/ui/screens/sale_ad_property.dart';
 import 'package:flutter_divar_application/ui/screens/set_location_screen.dart';
-import 'package:flutter_divar_application/ui/screens/set_sale_property.dart';
-import 'package:flutter_divar_application/ui/screens/welcome_screen.dart';
-import 'package:flutter_divar_application/ui/widgets/checkbox.dart';
 import 'ui/screens/login_screen.dart';
 
 void main() {
@@ -47,7 +40,7 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
-  int selectedBottomNavigationIndex = 0;
+  int selectedBottomNavigationIndex = 3;
 
   @override
   Widget build(BuildContext context) {
@@ -124,7 +117,7 @@ List<Widget> getScreens() {
   return <Widget>[
     ProfileScreen(),
     CategoryScreen(),
-    WelcomeScreen(),
+    SetLocationScreen(),
     HomeScreen(),
   ];
 }

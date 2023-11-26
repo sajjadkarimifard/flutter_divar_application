@@ -72,10 +72,13 @@ class _SaleAdPropertyState extends State<SaleAdProperty> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Apptext_Medium(
-                        '۱۶ دقیقه پیش در گرگان',
-                        CustomColor.greyText,
-                        TextAlign.end,
+                      Directionality(
+                        textDirection: TextDirection.rtl,
+                        child: Apptext_Medium(
+                          '۱۶ دقیقه پیش در گرگان',
+                          CustomColor.greyText,
+                          TextAlign.end,
+                        ),
                       ),
                       Apptext_Medium(
                         'آپارتمان',
@@ -136,13 +139,11 @@ class _SaleAdPropertyState extends State<SaleAdProperty> {
                               getWidget(selectedIndex);
                             });
                           },
-                          child: AnimatedContainer(
-                            duration: Duration(milliseconds: 100),
-                            curve: Curves.easeInOut,
+                          child: Container(
                             height: 30,
-                            margin: EdgeInsets.only(left: 16),
+                            margin: EdgeInsets.only(left: 8, right: 8),
                             padding: EdgeInsets.symmetric(
-                                horizontal: 8, vertical: 4),
+                                horizontal: 7, vertical: 4),
                             decoration: BoxDecoration(
                               border: Border.all(
                                 width: (index == selectedIndex) ? 0 : 1,

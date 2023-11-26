@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_divar_application/constant/color.dart';
 import 'package:flutter_divar_application/constant/text_style.dart';
-import 'package:flutter_divar_application/ui/screens/set_sale_property.dart';
+import 'package:flutter_divar_application/ui/screens/register_sale_ad_screen.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key});
@@ -30,7 +30,7 @@ class CategoryScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return StePropertyScreen();
+                      return RegisterSaleAdScreen();
                     },
                   ),
                 );

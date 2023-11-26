@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_divar_application/constant/color.dart';
 import 'package:flutter_divar_application/constant/text_style.dart';
-import 'package:flutter_divar_application/ui/screens/home_screen.dart';
 import 'package:flutter_divar_application/ui/screens/welcome_screen.dart';
 import 'package:flutter_divar_application/ui/widgets/container_botton.dart';
 

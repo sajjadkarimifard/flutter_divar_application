@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_divar_application/constant/color.dart';
 import 'package:flutter_divar_application/constant/text_style.dart';
+import 'package:flutter_divar_application/ui/screens/set_location_screen.dart';
 import 'package:flutter_divar_application/ui/widgets/checkbox.dart';
 import 'package:flutter_divar_application/ui/widgets/container_botton.dart';
 
@@ -147,7 +148,18 @@ class RegisterSaleAdScreen extends StatelessWidget {
                   PossibilitiesContainer(),
                   PossibilitiesContainer(),
                   SizedBox(height: 32),
-                  Containerbotton('بعدی', false),
+                  InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return SetLocationScreen();
+                            },
+                          ),
+                        );
+                      },
+                      child: Containerbotton('بعدی', false)),
                   SizedBox(height: 32),
                 ],
               ),
