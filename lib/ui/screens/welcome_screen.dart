@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_divar_application/constant/color.dart';
 import 'package:flutter_divar_application/constant/text_style.dart';
+import 'package:flutter_divar_application/main.dart';
 import 'package:flutter_divar_application/ui/widgets/container_botton.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -90,7 +91,18 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              Containerbotton('مرحله بعد', true),
+              InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return BottomNav();
+                        },
+                      ),
+                    );
+                  },
+                  child: Containerbotton('مرحله بعد', true)),
               SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

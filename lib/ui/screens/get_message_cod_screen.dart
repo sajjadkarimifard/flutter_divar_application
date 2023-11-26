@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_divar_application/constant/color.dart';
 import 'package:flutter_divar_application/constant/text_style.dart';
 import 'package:flutter_divar_application/ui/screens/home_screen.dart';
+import 'package:flutter_divar_application/ui/screens/welcome_screen.dart';
 import 'package:flutter_divar_application/ui/widgets/container_botton.dart';
 
 class GetMessageCodeScreen extends StatefulWidget {
@@ -64,36 +65,34 @@ class _GetMessageCodeScreenState extends State<GetMessageCodeScreen> {
                 scrollDirection: Axis.horizontal,
                 itemCount: 4,
                 itemBuilder: (BuildContext context, int index) {
-                  return Center(
-                    child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: 16),
-                      width: 65,
-                      height: 48,
-                      decoration: BoxDecoration(
-                        color: (selectedItemIndex == index)
-                            ? CustomColor.greyText
-                            : CustomColor.greyContainer,
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                      child: Center(
-                        child: TextField(
-                          onChanged: (value) {
-                            if (value.isEmpty && index > 0) {
-                              _focusNodes[index - 1].requestFocus();
-                            }
-                          },
-                          controller: _controllers[index],
-                          focusNode: _focusNodes[index],
-                          textAlign: TextAlign.center,
-                          style: TextStyle(fontFamily: 'SB'),
-                          cursorColor: CustomColor.greyContainer,
-                          keyboardType: TextInputType.number,
-                          maxLength: 1,
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            contentPadding: EdgeInsets.only(top: 5),
-                            counterText: '',
-                          ),
+                  return Container(
+                    margin: EdgeInsets.symmetric(horizontal: 16),
+                    width: 70,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: (selectedItemIndex == index)
+                          ? CustomColor.greyText
+                          : CustomColor.greyContainer,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Center(
+                      child: TextField(
+                        onChanged: (value) {
+                          if (value.isEmpty && index > 0) {
+                            _focusNodes[index - 1].requestFocus();
+                          }
+                        },
+                        controller: _controllers[index],
+                        focusNode: _focusNodes[index],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontFamily: 'SB'),
+                        cursorColor: CustomColor.greyContainer,
+                        keyboardType: TextInputType.number,
+                        maxLength: 1,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.only(top: 5),
+                          counterText: '',
                         ),
                       ),
                     ),
@@ -123,7 +122,7 @@ class _GetMessageCodeScreenState extends State<GetMessageCodeScreen> {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return HomeScreen();
+                          return WelcomeScreen();
                         },
                       ),
                     );

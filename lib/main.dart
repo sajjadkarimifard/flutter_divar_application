@@ -27,7 +27,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int selectedBottomNavigationIndex = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,69 +34,85 @@ class _MyAppState extends State<MyApp> {
       //   useMaterial3:
       // ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: IndexedStack(
-          index: selectedBottomNavigationIndex,
-          children: getScreens(),
-        ),
-        bottomNavigationBar: ClipRRect(
-          child: Container(
-            padding: EdgeInsets.only(bottom: 8),
-            height: 65,
-            child: BottomNavigationBar(
-              onTap: (int index) {
-                setState(() {
-                  selectedBottomNavigationIndex = index;
-                });
-              },
-              currentIndex: selectedBottomNavigationIndex,
-              type: BottomNavigationBarType.fixed,
-              backgroundColor: Colors.transparent,
-              elevation: 0,
-              selectedItemColor: CustomColor.redcolor,
-              unselectedItemColor: CustomColor.greyText,
-              selectedLabelStyle: TextStyle(
-                fontFamily: 'SB',
-                fontSize: 14,
-              ),
-              unselectedLabelStyle: const TextStyle(
-                fontFamily: 'SB',
-                fontSize: 14,
-              ),
-              items: [
-                BottomNavigationBarItem(
-                  label: 'آویز من',
-                  icon: Image.asset('assets/images/icon_profile.png'),
-                  activeIcon: Image.asset(
-                    'assets/images/icon_profile.png',
-                    color: CustomColor.redcolor,
-                  ),
-                ),
-                BottomNavigationBarItem(
-                  label: 'افزودن آویز',
-                  icon: Image.asset('assets/images/icon_add-circle.png'),
-                  activeIcon: Image.asset(
-                    'assets/images/icon_add-circle.png',
-                    color: CustomColor.redcolor,
-                  ),
-                ),
-                BottomNavigationBarItem(
-                  label: 'جستجو',
-                  icon: Image.asset('assets/images/icon_search.png'),
-                  activeIcon: Image.asset(
-                    'assets/images/icon_search.png',
-                    color: CustomColor.redcolor,
-                  ),
-                ),
-                BottomNavigationBarItem(
-                  label: 'آویز آگهی ها',
-                  icon: Image.asset('assets/images/icon_aviz.png'),
-                  activeIcon: Image.asset(
-                    'assets/images/icon_aviz.png',
-                  ),
-                ),
-              ],
+      home: LoginScreen(),
+    );
+  }
+}
+
+class BottomNav extends StatefulWidget {
+  const BottomNav({super.key});
+
+  @override
+  State<BottomNav> createState() => _BottomNavState();
+}
+
+class _BottomNavState extends State<BottomNav> {
+  int selectedBottomNavigationIndex = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: IndexedStack(
+        index: selectedBottomNavigationIndex,
+        children: getScreens(),
+      ),
+      bottomNavigationBar: ClipRRect(
+        child: Container(
+          padding: EdgeInsets.only(bottom: 8),
+          height: 65,
+          child: BottomNavigationBar(
+            onTap: (int index) {
+              setState(() {
+                selectedBottomNavigationIndex = index;
+              });
+            },
+            currentIndex: selectedBottomNavigationIndex,
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            selectedItemColor: CustomColor.redcolor,
+            unselectedItemColor: CustomColor.greyText,
+            selectedLabelStyle: TextStyle(
+              fontFamily: 'SB',
+              fontSize: 14,
             ),
+            unselectedLabelStyle: const TextStyle(
+              fontFamily: 'SB',
+              fontSize: 14,
+            ),
+            items: [
+              BottomNavigationBarItem(
+                label: 'آویز من',
+                icon: Image.asset('assets/images/icon_profile.png'),
+                activeIcon: Image.asset(
+                  'assets/images/icon_profile.png',
+                  color: CustomColor.redcolor,
+                ),
+              ),
+              BottomNavigationBarItem(
+                label: 'افزودن آویز',
+                icon: Image.asset('assets/images/icon_add-circle.png'),
+                activeIcon: Image.asset(
+                  'assets/images/icon_add-circle.png',
+                  color: CustomColor.redcolor,
+                ),
+              ),
+              BottomNavigationBarItem(
+                label: 'جستجو',
+                icon: Image.asset('assets/images/icon_search.png'),
+                activeIcon: Image.asset(
+                  'assets/images/icon_search.png',
+                  color: CustomColor.redcolor,
+                ),
+              ),
+              BottomNavigationBarItem(
+                label: 'آویز آگهی ها',
+                icon: Image.asset('assets/images/icon_aviz.png'),
+                activeIcon: Image.asset(
+                  'assets/images/icon_aviz.png',
+                ),
+              ),
+            ],
           ),
         ),
       ),

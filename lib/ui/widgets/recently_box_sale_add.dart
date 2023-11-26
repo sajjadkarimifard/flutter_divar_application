@@ -9,9 +9,8 @@ class recentlySaleAdBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(16),
-      margin: EdgeInsets.only(left: 16, top: 16, right: 16),
+      margin: EdgeInsets.only(left: 16, bottom: 30, right: 16),
       height: 139,
-      width: 343,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(4),

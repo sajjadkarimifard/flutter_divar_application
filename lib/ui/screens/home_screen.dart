@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_divar_application/constant/color.dart';
 import 'package:flutter_divar_application/constant/text_style.dart';
-import 'package:flutter_divar_application/ui/widgets/box_sale_add.dart';
-import 'package:flutter_divar_application/ui/widgets/hot_box_sale.dart';
+import 'package:flutter_divar_application/ui/widgets/hot_box_sale_ad.dart';
+import 'package:flutter_divar_application/ui/widgets/recently_box_sale_add.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
