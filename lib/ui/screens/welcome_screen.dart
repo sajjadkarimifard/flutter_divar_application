@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_divar_application/constant/color.dart';
 import 'package:flutter_divar_application/constant/text_style.dart';
-import 'package:flutter_divar_application/main.dart';
+import 'package:flutter_divar_application/ui/screens/dashboard_screen.dart';
 import 'package:flutter_divar_application/ui/widgets/container_botton.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -97,7 +97,7 @@ class WelcomeScreen extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return BottomNav();
+                          return DashboardScreen();
                         },
                       ),
                     );

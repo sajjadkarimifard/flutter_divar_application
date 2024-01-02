@@ -55,7 +55,7 @@ class recentlySaleAdBox extends StatelessWidget {
                   CustomColor.greyText,
                   TextAlign.end,
                 ),
-                SizedBox(height: 16),
+                Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

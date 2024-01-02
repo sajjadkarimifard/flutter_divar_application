@@ -44,11 +44,15 @@ class LoginScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: CustomColor.redcolor,
                     minimumSize: Size(159, 40),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4),
+                    ),
                   ),
                   onPressed: () {},
                   child: Text(
                     'ثبت نام',
                     style: TextStyle(
+                      color: Colors.white,
                       fontFamily: 'SM',
                       fontSize: 16,
                     ),
@@ -57,9 +61,12 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(width: 25),
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
+                    foregroundColor: CustomColor.redcolor,
                     side: BorderSide(color: CustomColor.redcolor),
-                    primary: CustomColor.redcolor,
                     minimumSize: Size(159, 40),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4),
+                    ),
                   ),
                   onPressed: () {
                     Navigator.push(
